@@ -5,16 +5,17 @@ SPEAKER::SPEAKER(void) {
 }
 
 void SPEAKER::begin() {
-    ledcSetup(TONE_PIN_CHANNEL, 0, 13);
+    ledcSetup(TONE_PIN_CHANNEL, 0, 13); // PWM channel, frequency, resolution in bits
     ledcAttachPin(SPEAKER_PIN, TONE_PIN_CHANNEL);
     // digitalWrite(SPEAKER_PIN, 0);
-    pinMode(25, OUTPUT);
-    digitalWrite(25, HIGH);
-    setBeep(1000, 100);
+    pinMode(SPEAKER_ENABLE_PIN, OUTPUT);
+    digitalWrite(SPEAKER_ENABLE_PIN, HIGH); // IO25 drives PAM8304 'IN-' and '/SD' pins
+    setBeep(1000, 100); // standard beep is 1kHz for 0.1 seconds
 }
 
 void SPEAKER::end() {
     ledcDetachPin(SPEAKER_PIN);
+    // digitalWrite(SPEAKER_ENABLE_PIN, LOW);
 }
 
 void SPEAKER::tone(uint16_t frequency) {
