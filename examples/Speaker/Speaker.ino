@@ -1,4 +1,5 @@
 #include <odroid_go.h>
+#include <utility/music_8bit.h>
 
 void setup() {
     // put your setup code here, to run once:
