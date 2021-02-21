@@ -9,9 +9,7 @@
 
 #include "utility/Display.h"
 #include "utility/Speaker.h"
-#include "utility/music_8bit.h"
 #include "utility/Button.h"
-#include "utility/bmp_map.h"
 #include "utility/battery.h"
 
 extern "C" {
@@ -34,11 +32,9 @@ class ODROID_GO {
     Button BtnSelect = Button(BUTTON_SELECT, true, DEBOUNCE_MS);
     Button BtnStart = Button(BUTTON_START, true, DEBOUNCE_MS);
 
-    // LCD
     ILI9341 lcd = ILI9341();
     SPEAKER Speaker;
     Battery battery;
-
 
 };
 
