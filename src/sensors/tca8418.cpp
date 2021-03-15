@@ -291,7 +291,7 @@ void KEYS::pinInterruptMode(uint32_t pin, uint8_t mode, uint8_t level, uint8_t f
   read3Bytes((uint32_t *)&eventmodeSetting, REG_GPI_EM1);
 
   switch(mode) {
-    case INTERRUPT:
+    case K_INTERRUPT:
 	  bitSet(intSetting, pin);
 	  break;
 	case NOINTERRUPT:

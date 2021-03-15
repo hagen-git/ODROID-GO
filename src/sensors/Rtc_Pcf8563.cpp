@@ -364,7 +364,7 @@ void Rtc_Pcf8563::getTime()
 }
 
 char *Rtc_Pcf8563::version(){
-  return RTCC_VERSION;  
+  return (char *)RTCC_VERSION;  
 }
 
 char *Rtc_Pcf8563::formatTime(byte style)

@@ -23,7 +23,7 @@
 #define GPIO 0x38
 #define EDGE 0x39
 #define LEVEL 0x40
-#define INTERRUPT 0x41
+#define K_INTERRUPT 0x41
 #define NOINTERRUPT 0x42
 #define FIFO 0x43
 #define NOFIFO 0x44
